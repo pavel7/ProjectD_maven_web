@@ -187,7 +187,7 @@ public class ProjectX {
         //test200.addVertex(new ElementOfGraph(test151, testC111));
 //        Dijkstra temp111 = new Dijkstra(test200, test10, test151);
 //        int[] path1 = temp111.pathFromTo();
-        System.out.print("1");
+        System.out.println("1");
         HibernateUtil.closeSession();
     }
 }
