@@ -15,16 +15,16 @@
         <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
-        <mapping class="com.omsu.cherepanov.Clients.Equipment"/>
-        <mapping class="com.omsu.cherepanov.Connection.Connection"/>
-        <mapping class="com.omsu.cherepanov.Clients.Mainclient"/>
-        <mapping class="com.omsu.cherepanov.Clients.MainclientEquipment"/>
-        <mapping class="com.omsu.cherepanov.Clients.MainclientEquipmentID"/>
-        <mapping class="com.omsu.cherepanov.Clients.People"/>
-        <mapping class="com.omsu.cherepanov.Clients.Construction"/>
-        <mapping class="com.omsu.cherepanov.Graph.ElementOfGraphID"/>
-        <mapping class="com.omsu.cherepanov.Graph.ElementOfGraph"/>
-        <mapping class="com.omsu.cherepanov.Graph.VertexConnection"/>
-        <mapping class="com.omsu.cherepanov.Graph.DirectedGraph"/>
+        <mapping class="com.omsu.cherepanov.clients.Equipment"/>
+        <mapping class="com.omsu.cherepanov.connection.Connection"/>
+        <mapping class="com.omsu.cherepanov.clients.Mainclient"/>
+        <mapping class="com.omsu.cherepanov.clients.MainclientEquipment"/>
+        <mapping class="com.omsu.cherepanov.clients.MainclientEquipmentID"/>
+        <mapping class="com.omsu.cherepanov.clients.People"/>
+        <mapping class="com.omsu.cherepanov.clients.Construction"/>
+        <mapping class="com.omsu.cherepanov.graph.ElementOfGraphID"/>
+        <mapping class="com.omsu.cherepanov.graph.ElementOfGraph"/>
+        <mapping class="com.omsu.cherepanov.graph.VertexConnection"/>
+        <mapping class="com.omsu.cherepanov.graph.DirectedGraph"/>
     </session-factory>
 </hibernate-configuration>

@@ -1,6 +1,6 @@
 package com.omsu.cherepanov.hibernate;
 
-import com.omsu.cherepanov.Clients.People;
+import com.omsu.cherepanov.clients.People;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 
@@ -42,7 +42,7 @@ public class PeopleDAO extends DAO {
     public People retrievePeople(int id) throws Exception {
         try {
             begin();
-            Query q = getSession().createQuery("from People where Mainclient_objectID = :id");
+            Query q = getSession().createQuery("from People where objectID = :id");
             q.setInteger("id", id);
             People newPeople = (People) q.uniqueResult();
             commit();

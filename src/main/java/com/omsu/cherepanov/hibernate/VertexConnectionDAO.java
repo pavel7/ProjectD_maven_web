@@ -1,6 +1,6 @@
 package com.omsu.cherepanov.hibernate;
 
-import com.omsu.cherepanov.Graph.VertexConnection;
+import com.omsu.cherepanov.graph.VertexConnection;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 
@@ -47,7 +47,7 @@ public class VertexConnectionDAO extends DAO {
             commit();
         } catch (HibernateException e) {
             rollback();
-            throw new Exception("Could not delete Vertex Connection Identifier:" + vertexConnection.getId(), e);
+            throw new Exception("Could not delete Vertex connection Identifier:" + vertexConnection.getId(), e);
         } finally {
             close();
         }

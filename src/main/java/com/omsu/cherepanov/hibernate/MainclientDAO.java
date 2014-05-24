@@ -1,6 +1,6 @@
 package com.omsu.cherepanov.hibernate;
 
-import com.omsu.cherepanov.Clients.Mainclient;
+import com.omsu.cherepanov.clients.Mainclient;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 

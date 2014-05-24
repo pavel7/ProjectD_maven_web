@@ -1,7 +1,7 @@
 package com.omsu.cherepanov.hibernate;
 
-import com.omsu.cherepanov.Graph.DirectedGraph;
-import com.omsu.cherepanov.Graph.VertexConnection;
+import com.omsu.cherepanov.graph.DirectedGraph;
+import com.omsu.cherepanov.graph.VertexConnection;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 
@@ -22,7 +22,7 @@ public class DirectedGraphDAO extends DAO {
             commit();
         } catch (HibernateException e) {
             rollback();
-            throw new Exception("Could not save Graph!!!", e);
+            throw new Exception("Could not save graph!!!", e);
         } finally {
             close();
         }
@@ -47,7 +47,7 @@ public class DirectedGraphDAO extends DAO {
             return graph;
         } catch (HibernateException e) {
             rollback();
-            throw new Exception("Could not get Graph", e);
+            throw new Exception("Could not get graph", e);
         } finally {
             close();
         }

@@ -4,7 +4,7 @@ package com.omsu.cherepanov.hibernate;
  * Created by Павел on 24.04.2014.
  */
 
-import com.omsu.cherepanov.Connection.Connection;
+import com.omsu.cherepanov.connection.Connection;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 
@@ -23,7 +23,7 @@ public class ConnectionDAO extends DAO {
             return connection;
         } catch (HibernateException e) {
             rollback();
-            throw new Exception("Could not create Connection Defence:" + newDefence + ", Identifier:" + id, e);
+            throw new Exception("Could not create connection Defence:" + newDefence + ", Identifier:" + id, e);
         } finally {
             close();
         }
@@ -37,7 +37,7 @@ public class ConnectionDAO extends DAO {
             commit();
         } catch (HibernateException e) {
             rollback();
-            throw new Exception("Could not save Connection Defence:" + connection.getDefence() + ", Identifier:" + connection.getObjectID(), e);
+            throw new Exception("Could not save connection Defence:" + connection.getDefence() + ", Identifier:" + connection.getObjectID(), e);
         } finally {
             close();
         }
@@ -53,7 +53,7 @@ public class ConnectionDAO extends DAO {
             return newConnection;
         } catch (HibernateException e) {
             rollback();
-            throw new Exception("Could not get Connection Identifier:" + id, e);
+            throw new Exception("Could not get connection Identifier:" + id, e);
         } finally {
             close();
         }
@@ -66,7 +66,7 @@ public class ConnectionDAO extends DAO {
             commit();
         } catch (HibernateException e) {
             rollback();
-            throw new Exception("Could not delete Connection Identifier:" + connection.getObjectID(), e);
+            throw new Exception("Could not delete connection Identifier:" + connection.getObjectID(), e);
         } finally {
             close();
         }

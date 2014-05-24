@@ -1,12 +1,13 @@
-import com.omsu.cherepanov.Clients.Construction;
-import com.omsu.cherepanov.Clients.Equipment;
-import com.omsu.cherepanov.Clients.Mainclient;
-import com.omsu.cherepanov.Clients.People;
-import com.omsu.cherepanov.Connection.Connection;
-import com.omsu.cherepanov.Graph.DirectedGraph;
-import com.omsu.cherepanov.Graph.ElementOfGraph;
-import com.omsu.cherepanov.Graph.VertexConnection;
+import com.omsu.cherepanov.clients.Construction;
+import com.omsu.cherepanov.clients.Equipment;
+import com.omsu.cherepanov.clients.Mainclient;
+import com.omsu.cherepanov.clients.People;
+import com.omsu.cherepanov.connection.Connection;
+import com.omsu.cherepanov.graph.DirectedGraph;
+import com.omsu.cherepanov.graph.ElementOfGraph;
+import com.omsu.cherepanov.graph.VertexConnection;
 import com.omsu.cherepanov.hibernate.*;
+import com.omsu.cherepanov.users.UserBean;
 
 import java.util.HashMap;
 /*
@@ -64,7 +65,7 @@ public class ProjectX {
 //        test12.addVertexToVertex(test2, test3);
 //        test12.addVertexToVertex(test2, test4);
 //        DirectedGraph test123=new DirectedGraph(2);
-//        Map tt=new Map(1,2);
+//        map tt=new map(1,2);
 //        Dijkstra temp11=new Dijkstra(test12,test,test1);
 //        Iterator testt=test12.getIteratorOfElem(0);
 //        int[]path=temp11.pathFromTo();
@@ -153,21 +154,27 @@ public class ProjectX {
         vertexConnection1.addVertex(testPeople, testC101);
         vertexConnection1.addVertex(ttt, testC11);
         DirectedGraph test123 = new DirectedGraph();
+        UserDAO test444 = new UserDAO();
         //test123.addVertex();
         //ElementOfGraphDAO elementOfGraphDAO = new ElementOfGraphDAO();
         // ElementOfGraph elementOfGraph = new ElementOfGraph(ttt, testC20, 515);
         DirectedGraphDAO directedGraphDAO = new DirectedGraphDAO();
         try {
+            UserBean user5551 = new UserBean();
+            user5551.setUsername("test");
+            user5551.setPassword("q");
+            user5551 = test444.login(user5551);
             //connectionDAO.saveConnection(testC20);
             //userDAO.createEquipment("qwe", "qwe", 1011);
             //testDAO.createEquipment("4","4",4);
             //Mainclient t1 = userDAO.retrieveMainclient(2);
             //Equipment test442 = testDAO.retrieveEquipment("qwe", "qwe");
-            //Connection newCon1 = connectionDAO.retrieveConnection(13);
+            //connection newCon1 = connectionDAO.retrieveConnection(13);
             //userDAO.saveMainclient(ttt);
             //peopleDAO.savePeople(testPeople);
             //constructionDAO.saveConstruction(testConstruction);
             //elementOfGraphDAO.saveElementOfGraph(elementOfGraph);
+            People test115 = peopleDAO.retrievePeople(7);
             vertexConnectionDAO.saveVertexConnection(vertexConnection);
             vertexConnectionDAO.saveVertexConnection(vertexConnection1);
             VertexConnection t1 = vertexConnectionDAO.retrieveVertexConnection(12);

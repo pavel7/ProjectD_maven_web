@@ -1,6 +1,6 @@
 package com.omsu.cherepanov.hibernate;
 
-import com.omsu.cherepanov.Clients.Construction;
+import com.omsu.cherepanov.clients.Construction;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 
@@ -42,7 +42,7 @@ public class ConstructionDAO extends DAO {
     public Construction retrieveConstruction(int newID) throws Exception {
         try {
             begin();
-            Query q = getSession().createQuery("from Construction where Mainclient_objectID = :newID");
+            Query q = getSession().createQuery("from Construction where objectID = :newID");
             q.setInteger("newID", newID);
             Construction construction = (Construction) q.uniqueResult();
             //Query q1 = getSession().createQuery("from mainclientequ where Mainclient_ObjectID = :newID");
