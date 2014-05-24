@@ -18,7 +18,7 @@ public class UserDAO extends DAO {
             begin();
             String username = userBean.getUsername();
             String password = HashText.sha1(userBean.getPassword());
-            Query q = getSession().createSQLQuery("select count(*) from accounts where Login = :user_login and Password = :user_password")
+            Query q = getSession().createSQLQuery("select count(*) from accounts where Login=:user_login and Password=:user_password")
                     .setParameter("user_login", username)
                     .setParameter("user_password", password);
             int amount = ((BigInteger) q.uniqueResult()).intValue();
